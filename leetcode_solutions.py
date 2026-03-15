@@ -287,7 +287,7 @@ class MinStack:
     def getMin(self) -> int:
         return self.minstack[-1]
 
-#Eavluate Reverse Polish Notation
+#Evaluate Reverse Polish Notation
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack=[]

@@ -353,3 +353,20 @@ class Solution:
                 else:
                     return True
         return False
+
+#KOKO eating bananas
+class Solution:
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        l,r=1,max(piles)
+        res=max(piles)
+        while l<=r:
+            total=0
+            m=(l+r)//2
+            for i in piles:
+                total+=math.ceil(i/m)
+            if total>h:
+                l=m+1
+            elif total<=h:
+                r=m-1
+                res=min(res,m)
+        return res
